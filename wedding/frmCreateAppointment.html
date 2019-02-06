@@ -1,0 +1,116 @@
+<html>
+<head >
+    <title>Sign Up</title>
+	<link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+     <header>
+<a href="frmHome.html"><img id="picHomeLogo" alt="" src="images/logo%201.png" /></a>
+<div class="buttonleft"> 
+<a href="frmHome.html">Home</a>
+    <a href="frmMyProfile.html">My Profile</a>
+<a href="frmAppointment.html">Appointment</a> 
+<a>Logout</a> 
+</div>
+    </header>
+    <form><section><center> 
+<table>
+<tr>
+<td>Username :</td><td><input type="text" id="Username" pattern="[a-zA-z]{5,50}" required></td>
+</tr>
+<tr>
+<td colspan="2" ><span id="err1" class="errormessage"></span><br></td>
+</tr>
+    <tr>
+<td> Email Id: </td>
+<td><input type="email" name="email" id="email" required>
+</td>
+</tr>
+    <tr>
+<td colspan="2" ><span id="err2" class="errormessage"></span><br></td>
+</tr>
+<tr>
+<td> Phone No: </td>
+<td><input type="tel" name="Phone" id="Phone" pattern="[0-9]{10}" required>
+</td>
+</tr>
+<tr>
+<td colspan="2" ><span id="err3" class="errormessage"></span><br></td>
+</tr>
+     <tr>
+<td> Wedding Date : </td>
+<td><input type="date" name="Wedding Date" id="Wedding Date" required>
+</td>
+</tr>
+    <tr>
+<td colspan="2" ><span id="err4" class="errormessage"></span><br></td>
+</tr>
+<tr>
+<td> Appointment Made : </td>
+<td><input type="date" name="Appointment Made" id="Appointment Made" required>
+</td>
+</tr>
+    <tr>
+<td colspan="2" ><span id="err5" class="errormessage"></span><br></td>
+</tr>
+    <tr>
+    <td> Appointment Date : </td>
+<td><input type="date" name="Appointment Date" id="Appointment Date" required>
+</td>
+</tr>
+    <tr>
+<td colspan="2" ><span id="err6" class="errormessage"></span><br></td>
+</tr>
+<tr>
+<td colspan="2" > <input class="a_sub" type="submit" value="Submit" id="btnsubmit" ></td>
+</tr>
+
+</table>   
+</center>                           
+</section>
+</form>
+    <script>
+    var btns=document.getElementById('btnsubmit');
+    btns.onclick=function(e){
+        val();
+       
+    };
+    
+    function val()
+    {
+        var name=document.getElementById('Username');        
+        var email=document.getElementById('email');
+        var Phone=document.getElementById('Phone');
+        var wd=document.getElementById('Wedding Date');
+        var am=document.getElementById('Appointment Made');
+        var ad=document.getElementById('Appointment Date');
+        if(name.checkValidity)
+            {
+                document.getElementById('err1').innerHTML=name.validationMessage;
+            }
+        if(email.checkValidity)
+            {
+                document.getElementById('err2').innerHTML=email.validationMessage;
+            }
+        if(Phone.checkValidity)
+            {
+                document.getElementById('err3').innerHTML=Phone.validationMessage;
+            }      
+         if(wd.checkValidity)
+            {
+                document.getElementById('err4').innerHTML=wd.validationMessage;
+            }
+        if(am.checkValidity)
+            {
+                document.getElementById('err5').innerHTML=am.validationMessage;
+            }
+        if(ad.checkValidity)
+            {
+                document.getElementById('err6').innerHTML=ad.validationMessage;
+            }
+    }
+        
+    
+    </script>
+</body>
+</html>
