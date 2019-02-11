@@ -1,0 +1,99 @@
+header{
+width:100%;
+float:left;
+position:fixed;
+top:0px;
+left:0px;
+background-color:#ffe6f7;
+box-shadow: 0 10px 15px 0 rgba(0,0,0,0.16),0 20px 15px 0 rgba(0,0,0,0.12);
+}
+a{
+background-color:Transparent;
+color:black;
+font-family:Lucida Sans Unicode;
+font-size:24px;
+text-align:left;
+text-decoration: none;
+display:inline-block;
+padding:15px;
+}
+img{
+width:30%;
+border-radius:50%;
+
+}
+.buttonleft{
+padding-top:20px;
+float:right;
+}
+body{
+background-image: url("images/b1.png"); 
+}
+section{
+	background-image: url("images/b2.jpg"); 
+box-shadow:0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);	
+	padding:16px 32px;
+	border-radius:5%;
+	min-height:600px;    
+    margin-right: 10%;    
+   margin-top:3%;
+    margin-left: 2%;
+    width: 55%;
+    position: absolute;
+	}
+	.p_d0{	
+	Font-Size:36px;
+	float:center;	
+	text-align:center;
+	font-weight:bold;
+	}
+	.p_d1{	
+	Font-Size:28px;	
+	text-align:left;
+	}
+.p_d2{	
+	Font-Size:18px!important;	
+	}
+.p_d3{
+    font-size: 24px!important;
+    text-align: center;
+}
+	table{	
+	Font-Size:24px;
+	text-align:center;
+	font-family:Lucida Sans Unicode;
+	margin-top:10%;
+        min-width: 50%;
+	}
+
+	.a_sub{
+background-color:Transparent;
+color:black;
+font-family:Lucida Sans Unicode;
+font-size:24px;
+text-align:left;
+text-decoration: none;
+display:inline-block;
+padding:5px;
+border-radius:15%;
+}
+.logintext{	
+	Font-Size:20px!important;
+	float:center;
+	margin-left:10%;
+	text-align:center;
+	}
+	.errormessage{
+		color:red;
+		font-size:20px;
+        float:right!important;
+	}
+select{
+    width: 50%;
+}
+
+.myslideshow{
+   margin-left:65%;    
+	margin-top:10%;
+    width: 30%;
+}

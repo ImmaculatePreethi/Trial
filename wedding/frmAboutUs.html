@@ -1,0 +1,81 @@
+<html>
+<head >
+    <title>About Us</title>
+	<link rel="stylesheet" href="styles5.css">
+    <link rel="stylesheet" href="styleSlideShow.css">
+	<style>
+	
+	</style>
+</head>
+<body>
+   <header>
+<a href="frmHome.html"><img id="picHomeLogo" alt="" src="images/logo%201.png" /></a>
+<div class="buttonleft"> 
+<a href="frmMyProfile.html">My Profile</a>
+<a href="frmAboutUs.html">About Us</a> 
+<a href="frmGallery.html">Gallery</a>
+<a href="frmContactUs.html">Contact Us</a> 
+<a href="frmSignUp.html">Sign Up</a> 
+<a href="frmLogin.html">Login</a> 
+</div>
+    </header>
+	
+<section>
+<div class="p_d0">
+Weddings should be joyous, stress-free,<br />
+and a celebration of love.<br />
+</div>
+<br>
+<br>
+<br>
+<div div class="p_d1">
+<p>
+<b>TweetyPretz and Co started in January 2019</b>
+with the launch of a simple directory dedicated to
+wedding invitation designers. We now have eight specialized wedding vendor directories,
+our main directory, as well as our online wedding planning guide to walk couples through
+the process of planning their wedding.
+</p>
+<br>
+<p>
+We now work with
+<b>over 3,500 wedding vendor</b>
+and are pleased to offer the
+best online wedding planning solution focused on promoting stress-free, personal, and unique weddings.
+</p>
+</div>
+</section>
+    <div class="myslideshow">
+    <div class="content">
+  <img class="pics" src="images/w11.jpg" style="width:100%">
+  <img class="pics" src="images/w12.jpg" style="width:100%">
+  <img class="pics" src="images/w13.jpg" style="width:100%">
+  <img class="pics" src="images/w14.jpg" style="width:100%">
+  <img class="pics" src="images/w15.jpg" style="width:100%">
+
+  <button class="btn leftbtn" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="btn rightbtn" onclick="plusDivs(1)">&#10095;</button>
+</div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("pics");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
+    </div>
+</body>
+</html>
