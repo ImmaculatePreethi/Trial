@@ -1,7 +1,8 @@
 <html>
 <head >
     <title>Sign Up</title>
-	<link rel="stylesheet" href="styles2.css">
+	<link rel="stylesheet" href="styles5.css">
+    <link rel="stylesheet" href="styleSlideShow.css">
 </head>
 <body>
      <header>
@@ -15,6 +16,7 @@
 <a href="frmLogin.html">Login</a> 
 </div>
     </header>
+   
     <form><section><center> 
 <table>
 <tr>
@@ -116,5 +118,35 @@ Username : </td>
         }
     
     </script>
+     <div class="myslideshow">
+    <div class="content">
+  <img class="pics" src="images/w4.jpg" style="width:100%">
+  <img class="pics" src="images/w5.jpg" style="width:100%">
+  <img class="pics" src="images/w1.jpg" style="width:100%">
+
+  <button class="btn leftbtn" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="btn rightbtn" onclick="plusDivs(1)">&#10095;</button>
+</div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("pics");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
+    </div>
 </body>
 </html>

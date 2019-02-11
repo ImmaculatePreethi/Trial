@@ -2,6 +2,7 @@
 <head >
     <title>Sign Up</title>
 	<link rel="stylesheet" href="styles2.css">
+     <link rel="stylesheet" href="styleSlideShow.css">
 </head>
 <body>
      <header>
@@ -13,6 +14,37 @@
 <a>Logout</a> 
 </div>
     </header>
+    <div class="myslideshowL">
+    <div class="content">
+  <img class="pics" src="images/w6.jpg" style="width:100%">
+  <img class="pics" src="images/w7.jpeg" style="width:100%">
+<img class="pics" src="images/w8.jpg" style="width:100%">
+  <img class="pics" src="images/w9.jpg" style="width:100%">
+  <img class="pics" src="images/w10.jpg" style="width:100%">
+  <button class="btn leftbtn" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="btn rightbtn" onclick="plusDivs(1)">&#10095;</button>
+</div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("pics");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
+    </div>
     <form><section><center> 
 <table>
 <tr>
@@ -137,5 +169,18 @@ Gender : </td>
         
     
     </script>
+    
+    <div class="marR">
+    <marquee scrollamount="2" direction="up" loop="true"> 
+ <span class="font1" >You  are<br>
+my  today<br>
+and <br>
+all  of  my<br>
+tomorrows<br><br><br><br><br><br></span>
+ <span class="font2" >
+forever <br>
+in<br>love 
+        </span></marquee>
+</div>
 </body>
 </html>

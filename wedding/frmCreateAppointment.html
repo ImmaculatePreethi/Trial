@@ -1,7 +1,8 @@
 <html>
 <head >
-    <title>Sign Up</title>
+    <title>Create Appointment</title>
 	<link rel="stylesheet" href="styles2.css">
+    <link rel="stylesheet" href="styleSlideShow.css">
 </head>
 <body>
      <header>
@@ -13,6 +14,23 @@
 <a>Logout</a> 
 </div>
     </header>
+    <div class="marL">
+    <marquee scrollamount="2" direction="up" loop="true"> 
+ <span class="font2" >And so<br>
+the<br>
+adventure<br>
+begins<br>
+<br><br><br><br><br><br></span>
+ <span class="font1" >
+love is <br>
+the best <br>
+     thing that<br>
+     can <br>
+     happen to<br>
+     a person
+        </span></marquee>
+</div>
+
     <form><section><center> 
 <table>
 <tr>
@@ -112,5 +130,36 @@
         
     
     </script>
+    
+    <div class="myslideshowR">
+    <div class="content">
+  <img class="pics" src="images/w4.jpg" style="width:100%">
+  <img class="pics" src="images/w5.jpg" style="width:100%">
+  <img class="pics" src="images/w1.jpg" style="width:100%">
+
+  <button class="btn leftbtn2" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="btn rightbtn1" onclick="plusDivs(1)">&#10095;</button>
+</div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("pics");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
+    </div>
 </body>
 </html>

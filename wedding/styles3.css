@@ -28,109 +28,58 @@ float:right;
 }
 body{
 background-image: url("images/b1.png"); 
+    
 }
 section{
-	background-image: url("images/b2.jpg"); 
-box-shadow:0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
-	margin-left:30%;
-	margin-right:20%;
-	margin-top:10%;
-	padding:16px 32px;
-	border-radius:5%;
-	min-height:600px;
-    width: 40%;
+	background-image:url('images/h2.jpg');
+	background-repeat:no-repeat;
+	width:65%;
+	height:525px;	    
+    margin-left:27%;
+    margin-right: 10%;
+	margin-top:13%;   
 	}
-	.p_d0{	
-	Font-Size:36px;
-	float:center;	
+	p{
+	margin-top:10%;
+	Font-Size:30px;
+	float:left;
+	margin-left:2%;
 	text-align:center;
-	font-weight:bold;
 	}
 	.p_d1{	
-	Font-Size:28px;	
-	text-align:left;
-	}
-.p_d2{	
-	Font-Size:18px!important;	
-	}
-.p_d3{
-    font-size: 24px!important;
-    text-align: center;
-}
-	table{	
-	Font-Size:24px;
-	text-align:center;
-	font-family:Lucida Sans Unicode;
-	margin-top:10%;
-       
-        min-width: 50%;
-	}
-
-	.a_sub{
-background-color:Transparent;
-color:black;
-font-family:Lucida Sans Unicode;
-font-size:24px;
-text-align:left;
-text-decoration: none;
-display:inline-block;
-padding:5px;
-border-radius:15%;
-}
-.logintext{	
 	Font-Size:20px!important;
-	float:center;
+	float:left;
 	margin-left:10%;
 	text-align:center;
 	}
-	.errormessage{
-		color:red;
-		font-size:20px;
-        float:right!important;
-        
-        margin-right: -25%;
+	.p_d2{	
+	Font-Size:18px!important;	
 	}
-select{
-    width: 50%;
-}
-.myslideshowR{
-position: absolute;
-margin-left: 73%;
-margin-top: -38%;
-width: 25%;
-}
 .myslideshowL{
-   position: absolute;
-    margin-top: -2%;
-    width: 25%;
-    margin-left: 2%;
-    
-}
-.marL{
     background-image: url(images/b3.jpg);
     background-repeat: no-repeat;
     background-position:center;
    position: absolute;
-    margin-top: 2%;
+    margin-top: -1%;
     min-width: 20%;
     margin-left: 2%;
     min-height: 600px;
     background-size: cover;
     
 }
-.marR{
+.myslideshowR{
     background-image: url(images/b3.jpg);
     background-repeat: no-repeat;
     background-position:center;
       position: absolute;
 margin-left: 75%;
-margin-top:  -27%;
+margin-top:  -28%;
 min-width: 20%;
     min-height: 600px;
     background-size: cover;
 }
 marquee{
-    margin-top: 40%;
+    margin-top: 45%;
     height: 250px;  
     font-weight: bolder;
     font-size: 30px;
