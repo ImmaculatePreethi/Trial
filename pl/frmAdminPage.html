@@ -1,0 +1,195 @@
+<html>
+<head >
+    <title>Admin Page</title>
+	<link rel="stylesheet" href="styles6.css">
+    <link rel="stylesheet" href="bootstrap.min.css">
+  <script src="jquery-3.3.1.min.js"></script>
+  <script src="bootstrap.min.js"></script>
+</head>
+<body>
+     <header>
+<a href="frmHome.html"><img class="imgs" id="picHomeLogo" alt="" src="images/logo%201.png" /></a>
+<div class="buttonleft"> 
+<a href="frmHome.html">Home</a> 
+<a><form method="get"><button name="logout" onclick="log()">Logout</button></form></a>
+    <script>
+        function log(){
+            <?php
+    session_start();
+            if(isset($_GET['logout']))
+            if( isset($_SESSION['User']) ){
+          unset($_SESSION['User']);                
+                 header("Location:frmHome.php");
+                die;
+            }
+            ?>
+        }
+   
+       </script>
+</div>
+         
+    </header>
+    <div class="body1">
+     <div class="myslideshowL">
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    
+    <div class="carousel-inner">
+      <div class="item active">
+        <img class="pics" src="images/w11.jpg" style="width:100%">
+ 
+      </div>
+
+      <div class="item">
+       <img class="pics" src="images/w12.jpg" style="width:100%">
+      </div>
+    
+      <div class="item">        
+  <img class="pics" src="images/w13.jpg" style="width:100%">
+      </div>
+    </div>
+
+   
+</div>
+</div>
+
+
+    <form method="get"><section><center> 
+<table>
+    <tr>
+<td ><a class="p_d3" href="frmAdminTodaySchedule.html">View Today's Schedule</a>
+    <script>
+    function ts()
+        {
+            <?php
+            if(isset($_GET['ts']))
+           {       header("Location:frmAdminTodaySchedule.php");
+                die;        }
+                 
+            
+            ?>
+        }
+    </script>
+</tr>
+
+    <tr>
+<td ><br></td>    
+</tr>
+    <tr>
+    <td ><a class="p_d3" href="frmAdminAppointments.html">View Appointment</a>
+        <script>
+    function a()
+        {
+            <?php
+            if(isset($_GET['a']))
+           {       header("Location:frmAdminAppointments.php");
+                die;        }
+                 
+            
+            ?>
+        }
+    </script>
+</tr>
+    
+    <tr>
+<td ><br></td>    
+</tr>
+      <?php 
+    $conn =mysqli_connect("localhost","root","","preethi");
+    $result2 =mysqli_query($conn,"SELECT * FROM appointment_details");
+		$count2=mysqli_num_rows($result2);
+               if($count2==0)
+               {                  
+                   $_SESSION['NO']="APOO001";
+               }
+        else{
+            while($row = mysqli_fetch_assoc($result2)) 
+            {
+                 $ap=$row['AppointmentNo']; 
+                $ap=substr($ap,4,6);
+                $ap=(int)$ap+1;            
+                $_SESSION['NO']="APOO00".$ap;
+            } 
+            mysqli_close($conn);
+        }?>
+    <tr>
+<td > 
+    <a class="p_d3" href="frmAdminCreate.html">Create an Appointment</a>  
+    <script>
+    function ca()
+        {
+            <?php
+            if(isset($_GET['ca']))
+           {       header("Location:frmAdminCreate.php");
+                die;        }
+                 
+            
+            ?>
+        }
+    </script>
+</tr>
+    
+    <tr>
+<td ><br></td>    
+</tr>
+  <tr>
+    <td ><a class="p_d3" href="frmAdminDelete.html">Delete an Appointment</a>
+        <script>
+    function das()
+        {
+            <?php
+            if(isset($_GET['das']))
+           {  
+             header("Location:frmAdminDelete.php");
+            die;     
+            }
+            
+            ?>
+        }
+    </script>
+</tr>  
+
+</table>   
+</center>                           
+</section>
+       
+</form>
+   <div class="myslideshowR">
+    <div class="content">
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    
+    <div class="carousel-inner">
+      <div class="item active">
+        <img class="pics" src="images/w1.jpg" style="width:100%">
+ 
+      </div>
+
+      <div class="item">
+       <img class="pics" src="images/w2.jpg" style="width:100%">
+      </div>
+    
+      <div class="item">        
+  <img class="pics" src="images/w3.jpg" style="width:100%">
+      </div>
+    </div>
+
+   
+</div>
+       </div>
+    </div>
+    </div>
+</body>
+</html>

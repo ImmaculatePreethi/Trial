@@ -1,0 +1,175 @@
+<html>
+<head >
+    <title>My Profile</title>
+	<link rel="stylesheet" href="styles2.css">
+      <link rel="stylesheet" href="bootstrap.min.css">
+  <script src="jquery-3.3.1.min.js"></script>
+  <script src="bootstrap.min.js"></script>
+    <style>
+        #pro2{
+            display: none;            
+        }
+    </style>
+</head>
+<body>
+     <header>
+<a href="frmHome.html"><img class="imgs" id="picHomeLogo" alt="" src="images/logo%201.png" /></a>
+<div class="buttonleft"> 
+<a href="frmHome.html">Home</a>
+    <a href="frmMyProfile.html">My Profile</a>
+<a href="frmAppointment.html">Appointment</a> 
+<a><form method="get"><button name="logout" onclick="log()">Logout</button></form></a>
+    <script>
+        function log(){
+            <?php
+    session_start();
+            if(isset($_GET['logout']))
+            if( isset($_SESSION['User']) ){
+          unset($_SESSION['User']);
+                
+                 header("Location:frmHome.php");
+                die;
+            }
+            ?>
+        }
+   
+       </script>
+</div>
+    </header>
+    <div class="body1">
+    <div class="myslideshowL">
+   <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    
+    <div class="carousel-inner">
+      <div class="item active">
+        <img class="pics" src="images/w5.jpg" style="width:100%">
+      </div>
+
+      <div class="item">
+        <img class="pics" src="images/w6.jpg" style="width:100%">
+      </div>
+    
+      <div class="item">
+        <img class="pics" src="images/w15.jpg" style="width:100%">
+      </div>
+    </div>
+
+   
+</div>
+    </div>
+        <div id="pro1">
+          <!--  <?php
+            
+            if(isset($_SESSION['User']))
+            {
+            $ses=$_SESSION['User']; 
+                $conn =mysqli_connect("localhost","root","","preethi");
+            $result =mysqli_query($conn,"SELECT * FROM user_details WHERE UserName='$ses'");
+               // echo $ses;
+            if (mysqli_num_rows($result) > 0) {
+    while($row = mysqli_fetch_assoc($result)) {
+        ?>-->
+  
+           <section><center> 
+<table>
+<tr>
+<td>Username :</td><td><?php echo $row['UserName']; ?></td>
+</tr>
+<tr>
+<td colspan="2" ><br></td>
+</tr>
+<tr>
+<td>
+Gender : </td>
+<td>
+    <?php echo $row['Gender']; ?>
+</td>
+</tr>
+    <tr>
+<td><br></td>
+</tr>
+    <tr>
+<td> Birthday : </td>
+<td><?php
+        if($row['Birthday']==0){
+            echo " ";
+        }
+        else{
+           echo $row['Birthday'];
+        }
+         ?>
+</td>
+</tr>
+    <tr>
+<td colspan="2" ><br></td>
+</tr>
+    <tr>
+<td> State : </td>
+<td><?php echo $row['State']; ?>
+</td>
+</tr>
+    <tr>
+<td ><br></td>
+</tr>
+<tr>
+<td> Email Id: </td>
+<td><?php echo $row['EmailId']; ?>
+</td>
+</tr>
+    <tr>
+<td colspan="2" ><br></td>
+</tr>
+<tr>
+<td> Phone No: </td>
+<td><?php if($row['PhoneNo']==0){
+            echo " ";
+        }
+        else{
+            echo $row['PhoneNo'];
+        }
+             ?>
+</td>
+</tr>
+<tr>
+<td colspan="2" ><br></td>
+</tr>
+<tr>
+    <td colspan="2" > <a href="frmMyProfileE.html"><button class="a_sub" id="Edit" name="edit" >Edit</button></a></td>
+</tr>
+
+</table>   
+</center>                           
+</section>
+<?php  }
+                }
+                mysqli_close($conn);
+                
+} 
+            ?>
+        </div>
+       
+ 
+   
+    
+    <div class="marR">
+    <marquee scrollamount="2" direction="up" loop="true"> 
+ <span class="font1" >You  are<br>
+my  today<br>
+and <br>
+all  of  my<br>
+tomorrows<br><br><br><br><br><br></span>
+ <span class="font2" >
+forever <br>
+in<br>love 
+        </span></marquee>
+</div>
+        </div>
+</body>
+</html>

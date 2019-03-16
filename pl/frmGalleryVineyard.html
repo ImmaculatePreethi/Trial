@@ -1,0 +1,58 @@
+<html>
+<head >
+    <title>vineyard</title>
+	<link rel="stylesheet" href="stylesGallery.css">
+</head>
+<body>
+<header>
+<a href="frmHome.html"><img class="imgs" id="picHomeLogo" alt="" src="images/logo%201.png" /></a>
+<div class="buttonleft">
+    <a href="frmHome.html">Home</a>
+    <a href="frmGallery.html">Gallery</a>
+<a href="frmGalleryBallroom.html">Ballroom</a> 
+<a href="frmGalleryVineyard.html">vineyard</a> 
+<a href="frmGalleryWaterfront.html">Waterfront</a> 
+<a href="frmGalleryBarn.html">Barn</a> 
+     <a href="frmGalleryCountryclub.html">Country Club</a> 
+    <a href="frmGalleryEstate.html">Estate</a> 
+</div>
+    </header>
+	<section>        
+  <div class="columns">
+      <img src="images/vineyard/6.jpg" style="width:100%" onclick="onClick(this)" >
+<img src="images/vineyard/0.jpg" style="width:100%" onclick="onClick(this)" >
+
+        </div>
+    
+   <div class="columns">      
+        <img src="images/vineyard/4.jpg" style="width:100%" onclick="onClick(this)" >
+      <img src="images/vineyard/5.jpg" style="width:100%" onclick="onClick(this)" >
+      
+   </div>
+    
+    <div class="columns">
+       <img src="images/vineyard/2.jpg" style="width:100%" onclick="onClick(this)" >  
+<img src="images/vineyard/3.jpg" style="width:100%" onclick="onClick(this)" >
+   </div>
+
+    <div class="columns">
+        <img src="images/vineyard/1.jpg" style="width:100%" onclick="onClick(this)" >
+            
+    </div>
+    </section>
+    
+    <div id="Container_box" class="onclickimage" onclick="this.style.display='none'">
+      <div class="imgview">
+      <img id="image_view">     
+    </div>
+  </div>
+    
+<script>
+function onClick(element) {
+  document.getElementById("image_view").src = element.src;
+  document.getElementById("Container_box").style.display = "block";  
+}
+</script>
+    
+</body>
+</html>

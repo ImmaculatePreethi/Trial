@@ -1,0 +1,165 @@
+<html>
+<head >
+    <title>Delete</title>
+	<link rel="stylesheet" href="styles7.css">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="jquery-3.3.1.min.js"></script>
+  <script src="bootstrap.min.js"></script>
+</head>
+<body>
+     <header>
+<a href="frmHome.html"><img class="imgs" id="picHomeLogo" alt="" src="images/logo%201.png" /></a>
+<div class="buttonleft"> 
+<a href="frmAdminPage.html">Admin</a>
+<a><form method="get"><button name="logout" onclick="log()">Logout</button></form></a>
+    <script>
+        function log(){
+            <?php
+    session_start();
+            if(isset($_GET['logout']))
+            if( isset($_SESSION['User']) ){
+          unset($_SESSION['User']);                
+                 header("Location:frmHome.php");
+                die;
+            }
+            ?>
+        }
+   
+       </script>
+</div>
+         
+    </header>
+    <div class="body1">
+     <div class="myslideshowL">
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    
+    <div class="carousel-inner">
+      <div class="item active">
+        <img class="pics" src="images/w11.jpg" style="width:100%">
+ 
+      </div>
+
+      <div class="item">
+       <img class="pics" src="images/w12.jpg" style="width:100%">
+      </div>
+    
+      <div class="item">        
+  <img class="pics" src="images/w13.jpg" style="width:100%">
+      </div>
+    </div>
+
+   
+</div>
+</div>
+
+
+    <section><center> 
+     
+<table >
+     <form method="get">
+        <input type="text" name="del" id="del" value="" hidden>
+    <tr>
+        <td>Appointment No</td>
+        <td>UserName</td>
+        <td>Phone NO</td>
+        <td>Wedding Date</td>
+    </tr>
+    <tr>
+    <td><br></td>
+    </tr>
+   <!--
+    <?php 
+   // session_start();
+      $conn =mysqli_connect("localhost","root","","preethi");
+            $result =mysqli_query($conn,"SELECT * FROM appointment_details ");
+            if (mysqli_num_rows($result) > 0) {
+               $i=0;
+    while($row = mysqli_fetch_assoc($result)) {
+    ?>
+    
+        
+    <tr>
+        <td><?php echo $row['AppointmentNo']; ?></td>
+        <td><?php echo $row['UserName']; ?></td>
+        <td><?php echo $row['PhoneNo']; ?></td>
+        <td><?php echo $row['WeddingDate']; ?></td>
+        <td> <button id="<?php echo $row['AppointmentNo'];?>"  
+            onclick="Delete(this.id);" value="<?php echo $row['AppointmentNo'];?>">Delete</button></td>
+        
+      
+       
+    </tr>
+       
+<?php
+    }
+            }
+        ?>
+       <script>
+    function Delete(c)
+{    
+        document.getElementById("del").value = c;
+   //alert(document.getElementById("del").value);
+   
+}             
+</script> 
+  <?php 
+   
+        if(isset($_GET['del']))
+        {           
+            $sa=$_GET['del'];
+            $conn =mysqli_connect("localhost","root","","preethi");        
+    $query="DELETE FROM appointment_details WHERE AppointmentNo='$sa'";
+mysqli_query($conn, $query);  
+
+        mysqli_close($conn); 
+            header("Location:frmAdminDelete.php");
+            die;
+        }     
+    ?>  -->
+         </form>
+</table>   
+</center>                           
+</section>
+       
+
+   <div class="myslideshowR">
+    <div class="content">
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    
+    <div class="carousel-inner">
+      <div class="item active">
+        <img class="pics" src="images/w1.jpg" style="width:100%">
+ 
+      </div>
+
+      <div class="item">
+       <img class="pics" src="images/w2.jpg" style="width:100%">
+      </div>
+    
+      <div class="item">        
+  <img class="pics" src="images/w3.jpg" style="width:100%">
+      </div>
+    </div>
+
+   
+</div>
+       </div>
+    </div>
+    </div>
+</body>
+</html>

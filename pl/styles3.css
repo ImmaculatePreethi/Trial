@@ -1,0 +1,145 @@
+header{
+width:100%;
+float:left;
+position:absolute;
+top:0px;
+left:0px;
+background-color:#ffe6f7;
+box-shadow: 0 10px 15px 0 rgba(0,0,0,0.16),0 20px 15px 0 rgba(0,0,0,0.12);
+}
+a{
+background-color:Transparent;
+color:black;
+font-family:Lucida Sans Unicode;
+font-size:24px;
+text-align:left;
+text-decoration: none;
+display:inline-block;
+padding:15px;
+}
+.imgs{
+width:40%;
+border-radius:50%;
+margin-left:15%;
+ box-shadow: 0 10px 15px 0 rgba(0,0,0,0.16),0 20px 15px 0 rgba(0,0,0,0.12);   
+}
+.buttonleft{
+padding-top:20px;
+float:right;
+}
+body{
+background-image: url("images/b1.png"); 
+    
+}
+.body1{
+    display:table;
+    margin: 10% 3%;
+    width:94%;
+    min-height: 10000px;
+}
+section{
+    float: left;
+	background-image:url('images/h2.jpg');
+	background-repeat:no-repeat;
+	width:54%;
+	height:525px;    
+    margin-top: 2%;
+	}
+.myslideshowL{
+    background-image: url(images/b3.jpg);
+    background-repeat: no-repeat;
+    background-position:center;
+    width: 20%;
+    min-height: 600px;
+    background-size: cover;
+    float: left;
+    margin-right: 3%;
+}
+.myslideshowR{
+    background-image: url(images/b3.jpg);
+    background-repeat: no-repeat;
+    background-position:center;
+width: 20%;
+    min-height: 600px;
+    background-size: cover;
+    float: left;
+    
+}
+.body2{
+   background-color:#ffe6f7;
+    min-height: 500px;
+    padding: 10%;
+   
+}
+.body2p{
+     width: 100%;   
+}
+.columns
+{
+    float:left;
+    width:20%;
+    
+}
+.onclickimage{    
+    display:none;
+    position:fixed;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background-color:black !important;
+}
+.imgview
+{
+    text-align: center;
+    position:fixed;
+    top:0;
+    width:100%;
+    height:100%;
+    background-color:black !important;
+}
+.columns img:hover{
+    opacity: 0.6;
+    transition: 0.3s
+}
+.columns img{
+    padding-bottom:10px;
+}
+.gallerybtn{
+    margin-top: 8%;
+    float: right;
+    display: block;
+}
+
+	p{
+	margin-top:10%;
+	Font-Size:30px;
+	float:left;
+	margin-left:2%;
+	text-align:center;
+	}
+	.p_d1{	
+	Font-Size:20px!important;
+	float:left;
+	margin-left:10%;
+	text-align:center;
+	}
+	.p_d2{	
+	Font-Size:18px!important;	
+	}
+
+marquee{
+    margin-top: 45%;
+    height: 250px;  
+    font-weight: bolder;
+    font-size: 30px;
+    text-align: center;
+    font-style: italic;
+    letter-spacing: 2px;
+}
+.font1{
+    font-family: fantasy;
+}
+.font1{
+    font-family:cursive;
+}

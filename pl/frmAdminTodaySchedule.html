@@ -1,0 +1,132 @@
+<html>
+<head >
+    <title>Today's Schedule</title>
+	<link rel="stylesheet" href="styles7.css">
+    <link rel="stylesheet" href="bootstrap.min.css">
+  <script src="jquery-3.3.1.min.js"></script>
+  <script src="bootstrap.min.js"></script>
+</head>
+<body>
+     <header>
+<a href="frmHome.html"><img class="imgs" id="picHomeLogo" alt="" src="images/logo%201.png" /></a>
+<div class="buttonleft"> 
+<a href="frmAdminPage.html">Admin</a>
+<a><form method="get"><button name="logout" onclick="log()">Logout</button></form></a>
+    <script>
+        function log(){
+            <?php
+    session_start();
+            if(isset($_GET['logout']))
+            if( isset($_SESSION['User']) ){
+          unset($_SESSION['User']);                
+                 header("Location:frmHome.php");
+                die;
+            }
+            ?>
+        }
+   
+       </script>
+</div>
+         
+    </header>
+    <div class="body1">
+     <div class="myslideshowL">
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    
+    <div class="carousel-inner">
+      <div class="item active">
+        <img class="pics" src="images/w11.jpg" style="width:100%">
+ 
+      </div>
+
+      <div class="item">
+       <img class="pics" src="images/w12.jpg" style="width:100%">
+      </div>
+    
+      <div class="item">        
+  <img class="pics" src="images/w13.jpg" style="width:100%">
+      </div>
+    </div>
+
+   
+</div>
+</div>
+
+
+    <form method="get"><section><center> 
+<table >
+    <tr>
+        <td>Appointment No</td>
+        <td>UserName</td>
+        <td>Email ID</td>
+        <td>Phone NO</td>
+        <td>Wedding Date</td>
+    </tr>
+    <tr>
+    <td><br></td>
+    </tr><!--
+    <?php 
+    $today=date('Y-m-d');  $today=date('Y-m-d', strtotime($today. ' + 1 day'));
+      $conn =mysqli_connect("localhost","root","","preethi");
+            $result =mysqli_query($conn,"SELECT * FROM appointment_details WHERE AppointmentDate='$today'");
+            if (mysqli_num_rows($result) > 0) {
+    while($row = mysqli_fetch_assoc($result)) {
+    ?>
+    
+    <tr>
+        <td><?php echo $row['AppointmentNo']; ?></td>
+        <td><?php echo $row['UserName']; ?></td>
+        <td><?php echo $row['EmailId']; ?></td>
+        <td><?php echo $row['PhoneNo']; ?></td>
+        <td><?php echo $row['WeddingDate']; ?></td>        
+    </tr>
+<?php
+    }
+            }
+        ?>
+-->
+</table>   
+</center>                           
+</section>
+       
+</form>
+   <div class="myslideshowR">
+    <div class="content">
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    
+    <div class="carousel-inner">
+      <div class="item active">
+        <img class="pics" src="images/w1.jpg" style="width:100%">
+ 
+      </div>
+
+      <div class="item">
+       <img class="pics" src="images/w2.jpg" style="width:100%">
+      </div>
+    
+      <div class="item">        
+  <img class="pics" src="images/w3.jpg" style="width:100%">
+      </div>
+    </div>
+
+   
+</div>
+       </div>
+    </div>
+    </div>
+</body>
+</html>

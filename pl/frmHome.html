@@ -1,0 +1,124 @@
+<html>
+<head >    
+    <title>Home</title>
+	<link rel="stylesheet" href="styles3.css">	
+</head>
+<body>
+<header>
+<a href="frmHome.html"><img class="imgs" id="picHomeLogo" alt="" src="images/logo%201.png" /></a>
+<div class="buttonleft" >
+     <?php
+            session_start();
+            if(isset($_SESSION['User']))
+         {  
+    if($_SESSION['User']=="admin"){?>
+        <a href="frmAdminPage.html">My Profile</a> <?php
+    }
+        else
+        {
+         ?>
+<a href="frmMyProfile.html">My Profile</a> 
+    <?php
+            }
+        }?>
+<a href="frmAboutUs.html">About Us</a> 
+<a href="frmGallery.html">Gallery</a>
+<a href="frmContactUs.html">Contact Us</a> 
+  <?php  if(!isset($_SESSION['User']))
+            {?>
+<a href="frmSignUp.html">Sign Up</a> 
+<a href="frmLogin.html">Login</a> 
+    <?php
+            }?>
+</div>
+    </header>
+    <div class="body1" >
+	 <div class="myslideshowL">
+    <marquee scrollamount="2" direction="up" loop="true"> 
+ <span class="font1" >You  are<br>
+my  today<br>
+and <br>
+all  of  my<br>
+tomorrows<br><br><br><br><br><br></span>
+ <span class="font2" >
+forever <br>
+in<br>love 
+        </span></marquee>
+</div>
+<section>    
+<p>
+Lovely , Simple , Free<br />
+The Simple Way To Plan Your Wedding<br />
+<span class="p_d1">
+Already have a account ?<a href="frmLogin.html" class="p_d2">Login here</a><br />
+<!--<asp:HyperLink ID="hlGuest" runat="server" Font-Size="Large" Font-Underline="False" ForeColor="Black" NavigateUrl="~/frmGuest.aspx" Target="_self">View Your Appointment As Guest here</asp:HyperLink>-->
+</span>
+</p>
+</section>
+     <div class="myslideshowR">
+    <marquee scrollamount="2" direction="up" loop="true"> 
+ <span class="font2" >And so<br>
+the<br>
+adventure<br>
+begins<br>
+<br><br><br><br><br><br></span>
+ <span class="font1" >
+love is <br>
+the best <br>
+     thing that<br>
+     can <br>
+     happen to<br>
+     a person
+        </span></marquee>
+</div>
+        </div>
+    <div class="body2">
+        <div class="body2p">
+        <div class="columns">
+      <img src="images/Barn/0.jpg" style="width:100%" onclick="onClick(this)" >
+        <img src="images/Barn/1.jpg" style="width:100%" onclick="onClick(this)" >
+   </div>
+    
+   <div class="columns">
+      
+      <img src="images/Barn/4.jpg" style="width:100%" onclick="onClick(this)" >
+      <img src="images/Barn/5.jpg" style="width:100%" onclick="onClick(this)" >   
+       
+        
+   </div>
+    
+    <div class="columns">
+      
+        <img src="images/Barn/2.jpg" style="width:100%" onclick="onClick(this)" >
+      <img src="images/Barn/3.jpg" style="width:100%" onclick="onClick(this)" >
+      
+   </div>
+
+    <div class="columns">
+      <img src="images/Barn/6.jpg" style="width:100%" onclick="onClick(this)" >
+    </div>
+   <div class="columns">
+      
+      <img src="images/Waterfront/4.jpg" style="width:100%" onclick="onClick(this)" >
+      <img src="images/Waterfront/5.jpg" style="width:100%" onclick="onClick(this)" >
+   </div>
+    
+   
+    
+    <div id="Container_box" class="onclickimage" onclick="this.style.display='none'">
+      <div class="imgview">
+      <img id="image_view">     
+    </div>
+  </div>
+    
+<script>
+function onClick(element) {
+  document.getElementById("image_view").src = element.src;
+  document.getElementById("Container_box").style.display = "block";  
+}
+</script>
+        <div class="gallerybtn"><a href="frmGallery.html">Gallery >></a></div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,201 @@
+<html>
+<head >
+    <title>Appointment</title>
+	<link rel="stylesheet" href="styles6.css">
+    <link rel="stylesheet" href="bootstrap.min.css">
+  <script src="jquery-3.3.1.min.js"></script>
+  <script src="bootstrap.min.js"></script>
+</head>
+<body>
+     <header>
+<a href="frmHome.html"><img class="imgs" id="picHomeLogo" alt="" src="images/logo%201.png" /></a>
+<div class="buttonleft"> 
+<a href="frmHome.html">Home</a>
+    <a href="frmMyProfile.html">My Profile</a>
+<a href="frmAppointment.html">Appointment</a> 
+<a><form method="get"><button name="logout" onclick="log()">Logout</button></form></a>
+    <script>
+        function log(){
+            <?php
+    session_start();
+            if(isset($_GET['logout']))
+            if( isset($_SESSION['User']) ){
+          unset($_SESSION['User']);                
+                 header("Location:frmHome.php");
+                die;
+            }
+            ?>
+        }
+   
+       </script>
+</div>
+         
+    </header>
+    <div class="body1">
+     <div class="myslideshowL">
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    
+    <div class="carousel-inner">
+      <div class="item active">
+        <img class="pics" src="images/w11.jpg" style="width:100%">
+ 
+      </div>
+
+      <div class="item">
+       <img class="pics" src="images/w12.jpg" style="width:100%">
+      </div>
+    
+      <div class="item">        
+  <img class="pics" src="images/w13.jpg" style="width:100%">
+      </div>
+    </div>
+
+   
+</div>
+</div>
+
+
+    <form method="get"><section><center> 
+<table>
+<tr>
+<td > 
+   <a class="p_d3" href="frmCreateAppointment.html">Create an Appointment</a>
+    <script>
+    function ca()
+        {
+		window.location.replace("frmCreateAppointment.html");
+            <?php
+            if(isset($_GET['ca']))
+           {       header("Location:frmCreateAppointment.php");
+                die;        }
+                 
+            
+            ?>
+        }
+    </script>
+</tr>
+    <tr>
+<td ><br></td>    
+</tr>
+    <tr>
+<td ><a class="p_d3" href="frmViewAppointment.html">View an Appointment</a>
+    <script>
+    function va()
+        {
+            <?php
+            if(isset($_GET['va']))
+           {       header("Location:frmViewAppointment.php");
+                die;        }
+                 
+            
+            ?>
+        }
+    </script>
+</tr>
+    <tr>
+<td ><br></td>    
+</tr>
+    <tr>
+    <td ><a class="p_d3" href="frmDeleteAppointment.html">Delete an Appointment</a>
+        <script>
+    function da()
+        {
+            <?php
+            if(isset($_GET['da']))
+           {       header("Location:frmDeleteAppointment.php");
+                die;        }
+                 
+            
+            ?>
+        }
+    </script>
+</tr>
+    
+
+</table>   
+</center>                           
+</section>
+   <!--    <?php 
+    $conn =mysqli_connect("localhost","root","","preethi");
+    $result2 =mysqli_query($conn,"SELECT * FROM appointment_details");
+		$count2=mysqli_num_rows($result2);
+               if($count2==0)
+               {                  
+                   $_SESSION['NO']="APOO001";
+               }
+        else{
+            while($row = mysqli_fetch_assoc($result2)) 
+            {
+                 $ap=$row['AppointmentNo']; 
+                $ap=substr($ap,4,6);
+                $ap=(int)$ap+1;            
+                $_SESSION['NO']="APOO00".$ap;
+            } 
+            mysqli_close($conn);
+        }?>
+         <?php $ses=$_SESSION['User'];
+                $conn =mysqli_connect("localhost","root","","preethi");
+    $result2 =mysqli_query($conn,"SELECT * FROM appointment_details WHERE UserName='$ses'");
+		$count2=mysqli_num_rows($result2);
+               if($count2==1)
+               {   ?> 
+                  <script type="text/javascript"> document.getElementById("ca").disabled = true;
+        document.getElementById("ca").innerHTML = "Create an Appointment (created)";</script>
+         <?php
+                   mysqli_close($conn);
+                                     
+               }
+        else{
+           
+           ?> 
+                  <script type="text/javascript"> document.getElementById("va").disabled = true;
+                     document.getElementById("va").innerHTML = "NO Appointment Exist to View";
+          document.getElementById("da").disabled = true;
+                      document.getElementById("da").innerHTML = "NO Appointment Exist to Delete";
+        </script>
+         <?php
+          
+            mysqli_close($conn);
+           
+            }?> -->
+</form>
+   <div class="myslideshowR">
+    <div class="content">
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    
+    <div class="carousel-inner">
+      <div class="item active">
+        <img class="pics" src="images/w1.jpg" style="width:100%">
+ 
+      </div>
+
+      <div class="item">
+       <img class="pics" src="images/w2.jpg" style="width:100%">
+      </div>
+    
+      <div class="item">        
+  <img class="pics" src="images/w3.jpg" style="width:100%">
+      </div>
+    </div>
+
+   
+</div>
+       </div>
+    </div>
+    </div>
+</body>
+</html>

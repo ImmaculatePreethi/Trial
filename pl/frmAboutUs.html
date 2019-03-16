@@ -1,0 +1,96 @@
+<html>
+<head >
+    <title>About Us</title>
+	<link rel="stylesheet" href="styles5.css">
+     <link rel="stylesheet" href="bootstrap.min.css">
+  <script src="jquery-3.3.1.min.js"></script>
+  <script src="bootstrap.min.js"></script>
+	<style>
+	
+	</style>
+</head>
+<body>
+   <header>
+<a href="frmHome.html"><img class="imgs" id="picHomeLogo" alt="" src="images/logo%201.png" /></a>
+<div class="buttonleft" >
+      <?php
+            session_start();
+            if(isset($_SESSION['User']))
+         {  
+    if($_SESSION['User']=="admin"){?>
+        <a href="frmAdminPage.html">My Profile(Admin)</a> <?php
+                                  }
+        else
+        {
+         ?>
+<a href="frmMyProfile.php">My Profile</a> 
+    <?php
+            }
+        }?>
+<a href="frmAboutUs.html">About Us</a> 
+<a href="frmGallery.html">Gallery</a>
+<a href="frmContactUs.html">Contact Us</a> 
+  <?php  if(!isset($_SESSION['User']))
+            {?>
+<a href="frmSignUp.html">Sign Up</a> 
+<a href="frmLogin.html">Login</a> 
+    <?php
+            }?>
+</div>
+    </header>
+	<div class="body1">
+<section>
+<div class="p_d0">
+Weddings should be joyous, stress-free,<br />
+and a celebration of love.<br />
+</div>
+<br>
+<br>
+<br>
+<div div class="p_d1">
+<p>
+<b>TweetyPretz and Co started in January 2019</b>
+with the launch of a simple directory dedicated to
+wedding invitation designers. We now have eight specialized wedding vendor directories,
+our main directory, as well as our online wedding planning guide to walk couples through
+the process of planning their wedding.
+</p>
+<br>
+<p>
+We now work with
+<b>over 3,500 wedding vendor</b>
+and are pleased to offer the
+best online wedding planning solution focused on promoting stress-free, personal, and unique weddings.
+</p>
+</div>
+</section>
+    <div class="myslideshow">
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    
+    <div class="carousel-inner">
+      <div class="item active">
+        <img class="pics" src="images/w6.jpg" style="width:100%">
+      </div>
+
+      <div class="item">
+        <img class="pics" src="images/w7.jpeg" style="width:100%">
+      </div>
+    
+      <div class="item">
+        <img class="pics" src="images/w8.jpg" style="width:100%">
+      </div>
+    </div>
+
+   
+</div>
+</div>
+        </div>
+</body>
+</html>
